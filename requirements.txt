@@ -1,6 +1,5 @@
-Flask
-numpy
-scikit-learn
-joblib
-gunicorn
-distutils
+Flask>=2.0.0
+numpy==2.1.1
+scikit-learn==1.5.1
+joblib==1.4.2
+gunicorn==23.0.0
