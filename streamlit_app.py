@@ -11,13 +11,13 @@ def main():
     # Display a single logo with adjusted size
     st.image("logo2.jpeg", width=150)  # Adjust width as needed
     
-    st.title("Insurance Claim Prediction App")
+    st.title("Claim Denial Prediction App")
     
     # Input fields for user data
     age = st.number_input("Enter Age", min_value=0, max_value=100, value=25)
     
     # Sex selection with only label displayed
-    sex_option = st.selectbox("Select Sex", options=["Male", "Female"])
+    sex_option = st.selectbox("Select Gender", options=["Male", "Female"])
     sex = 1 if sex_option == "Male" else 0
     
     bmi = st.number_input("Enter BMI", min_value=0.0, max_value=60.0, value=25.0)
@@ -43,9 +43,9 @@ def main():
         
         # Display the result message based on the prediction
         if prediction[0] == 1:
-            st.success("Congrats! Your insurance is claimed.")
+            st.success("Congratulations, Claim accepted")
         else:
-            st.error("Sorry! Your insurance is not claimed.")
+            st.error("Sorry, Claim denied.")
     
 # Run the main function (Streamlit handles server startup)
 if __name__ == '__main__':
